@@ -1,0 +1,673 @@
+/* Reset some default styles */
+body {
+    background-color: #1d1d1d;
+    background-image: url('image/bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #fff;
+}
+
+.navbar-scroll .nav-link,
+.navbar-scroll .fa-bars,
+.navbar-scroll .navar-brand {
+  color: #4f4f4f;
+}
+
+.navbar-scroll .nav-link:hover {
+  color: #1266f1;
+}
+
+/* Color of the links AFTER scroll */
+.navbar-scrolled .nav-link,
+.navbar-scrolled .fa-bars,
+.navbar-scrolled .navar-brand {
+  color: #4f4f4f;
+}
+
+.btn:hover{
+    background: rgba(255, 255, 255, 0.3);
+}
+#registerBtn{
+    margin-left: 15px;
+}
+.btn.white-btn{
+    background: rgba(255, 255, 255, 0.7);
+}
+.btn.btn.white-btn:hover{
+    background: rgba(255, 255, 255, 0.5);
+}
+.nav-menu-btn{
+    display: none;
+}
+
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    background-color: #5D5C66;
+    height: 100%;
+    width: 190px;
+    max-width: 100%;
+    z-index: 1;
+    overflow-y: auto;
+}
+
+.sidebar a {
+    padding: 10px 20px;
+    text-align: left;
+    text-decoration: none;
+    font-size: 16px;
+    color: white;
+    display: block;
+}
+
+.sidebar a:hover {
+    background-color: #555;
+}
+
+/* Profile Dropdown in Sidebar */
+.profile-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #ff8533;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s, top 0.3s;
+    transform-origin: top center;
+    transform: scaleY(0.8) rotateX(-90deg);
+    width: 200px;
+    padding: 10px 0;
+    z-index: 1002;
+}
+
+.profile-dropdown.show {
+    display: block;
+    opacity: 1;
+    transform: scaleY(1) rotateX(0);
+}
+
+/* Main content styles */
+.content {
+    padding: 20px;
+    transition: margin-left 0.3s;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 70px;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.register-pet-button,
+.main-nav button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.register-pet-button:hover,
+.main-nav button:hover {
+    background-color: #0056b3;
+}
+
+#homeContent {
+    
+    
+    width: 90.3%;
+    max-width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+ 
+}
+
+#homeContent button {
+    margin: 10px 0;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+#homeContent button:hover {
+    background-color: #0056b3;
+}
+
+/* Sliding content box */
+/* Pop-up appointment form */
+.popup {
+    width: 90.3%;
+    max-width: 100%;
+    background-color: #f8f9fa;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.aForm {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.input-group {
+    padding-right: 20%;
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.input-group input[type="date"],
+.input-group input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.input-group input[type="date"] + label,
+.input-group input[type="text"] + label {
+    margin-bottom: 5px;
+}
+
+.popup.modal-active {
+    display: block;
+}
+
+.popup label,
+.popup input,
+.popup button {
+    display: block;
+    margin: 5px 0;
+}
+
+.popup input {
+    display: inline;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.popup button {
+    display: table-column-group;
+    width: 32.3%;
+    padding: 5px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 0px;
+}
+
+.popup button:hover {
+    background-color: #0056b3;
+}
+
+.time-slot-button {
+    font-size: 16px;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.time-slot-button:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+/* Home Content Styles */
+
+#homeContent h1 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#homeContent p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+#homeContent button {
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#homeContent button:hover {
+    background-color: #0056b3;
+}
+
+#buttonContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#buttonContainer .myButton {
+    margin: 10px 0;
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#buttonContainer .myButton:hover {
+    background-color: #0056b3;
+}
+
+#registrationForm {
+    width: 100%;
+    max-width: 100%;
+    background-color: #f8f9fa;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+#registrationForm h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+#registrationForm label {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+#registrationForm input[type="text"],
+#registrationForm select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+#registrationForm input[type="radio"] {
+    margin-right: 5px;
+}
+
+#registrationForm button {
+    width: 50%;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+
+
+#registrationForm button:hover {
+    background-color: #0056b3;
+}
+
+.chat-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+}
+
+.chat-box {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 320px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    z-index: 1000;
+    font-family: Arial, sans-serif;
+}
+
+.chat-box .header {
+    background-color: #4267B2;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.chat-box .header h2 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.chat-box .header .tab, .chat-box .header .close-button {
+    border: none;
+    background: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.chat-box .header .close-button {
+    padding: 0;
+}
+
+.chat-box .content {
+    padding: 15px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.chat-box .message-input {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+}
+
+.chat-box .message-input input[type="text"] {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+}
+
+.chat-box .message-input .send-button {
+    border: none;
+    background-color: #4267B2;
+    color: #fff;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.faq-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.faq-list li {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.faq-list h4 {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.faq-list p {
+    margin: 0;
+    font-size: 14px;
+    color: #666;
+}
+
+.list-group-item+.list-group-item {
+    border-top-width: 0;
+    background-color: #ff8533;
+}
+
+.user-profile-wrapper {
+    position: relative;
+}
+
+.profile-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    width: max-content;
+    background-color: #ff8533;
+    border: 1px solid #ccc;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.user-profile-wrapper:hover .profile-dropdown {
+    display: block;
+}
+
+.profile-dropdown .list-group-item {
+    padding: 10px 15px;
+    color: #333;
+    transition: background-color 0.3s;
+}
+
+.profile-dropdown .list-group-item:hover {
+    background-color: #f0f0f0;
+}
+
+.adjust{
+    margin-top: 8%;
+    left: 25%;
+}
+
+.sidebar.sidebar-open {
+    left: 0;
+}
+
+.adjust .sidebar-open {
+   left: 230px; /* Adjust this value to match the width of your sidebar */
+ 
+}
+.carousel-inner .carousel-item {
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.carousel-inner .carousel-item h1 {
+    font-size: 3rem;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-inner .carousel-item p {
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+
+.toggle-button {
+    display: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: white;
+    padding: 10px;
+    align-items: center;
+}
+
+.toggle-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s;
+}
+
+@media (max-width: 1090px) {
+    .sidebar {
+        left:-250px
+    }
+    
+    .adjust {
+        left: 0; /* Adjust this value to match the width of your sidebar */
+    }
+    .col-md-9.sliding-content {
+        /* Add a fixed width to the content */
+        width: 70%; /* Adjust this value as needed */
+        margin: 0 10px; /* Center the content horizontally */
+        max-width: 100%;
+    }
+    
+    .controls {
+        text-align: center; /* Center the controls within the content */
+    }
+    
+    
+   
+}.col-md-9.sliding-content {
+    /* Add a fixed width to the content */
+    width: 70%; /* Adjust this value as needed */
+    margin: 0 10px; /* Center the content horizontally */
+    max-width: 100%;
+}
+
+.controls {
+    text-align: center; /* Center the controls within the content */
+}
+
+
+.slider-content {
+    width: 100%;
+    max-width: 600px;
+    margin: 50px auto;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    transition: all 0.3s ease;
+}
+
+.tab {
+    flex: 1;
+    background-color: #3498db;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    padding: 10px;
+    user-select: none;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.pet-info {
+    text-align: left;
+    flex: 1;
+    overflow-y: auto;
+}
+
+/* Custom Styles */
+label {
+    font-weight: bold;
+    color: #333;
+    font-size: 16px;
+}
+
+.form-control {
+    font-size: 16px;
+    border-radius: 0;
+}
+
+.tab.active {
+    background-color: #ff5733;
+}
+
+/* Add table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    height: 100%; /* Ensure the table takes up the entire container height */
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+.custom-button {
+    display: inline-block;
+    width: 100px; /* Adjust the width to control button size */
+    height: 100px; /* Adjust the height to control button size */
+    margin: 5px; /* Adjust margin to control spacing between buttons */
+    background-color: #007BFF; /* Button background color */
+    color: #FFFFFF; /* Button text color */
+    border: 2px solid #0056b3; /* Border color */
+    border-radius: 50%; /* Makes the button circular */
+    cursor: pointer;
+    font-size: 16px; /* Adjust font size */
+    font-weight: bold; /* Adjust font weight */
+    text-align: center;
+    line-height: 100px; /* Center the button text vertically */
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide text overflow */
+    text-overflow: ellipsis; /* Add ellipsis for long text */
+}
+
+    .custom-button:hover {
+        background-color: #0056b3; /* Button background color on hover */
+    }
+
+    /* Media query for responsiveness */
+    @media (max-width: 768px) {
+        .custom-button {
+            width: 80px; /* Adjust the width for smaller screens */
+            height: 80px; /* Adjust the height for smaller screens */
+            font-size: 14px; /* Adjust font size for smaller screens */
+            line-height: 80px; /* Center the button text vertically */
+        }
+    }

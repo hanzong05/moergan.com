@@ -1,0 +1,723 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+body{
+   background-color: #f3f5f9;
+}
+
+
+.wrapper{
+  display: flex;
+  position: relative;
+}
+.wrapper .sidebar {
+  margin-left: -200px;
+  width: 200px;
+  height: 100%;
+  background-color: rgb(4, 95, 4);
+  padding: 30px 0px;
+  position: fixed;
+  transition: margin-left 0.3s ease; /* Add transition for smooth animation */
+}
+
+.wrapper .main_content {
+  width: 100%;
+  margin-left: 0px;
+  transition: margin-left 0.3s ease; /* Add transition for smooth animation */
+}
+
+.wrapper .sidebar.hide {
+  margin-left: -200px; /* Adjusted margin for hidden state */
+}
+
+/* Rest of your existing styles */
+
+/* Add or update this style for the toggle button */
+
+
+.toggle_btn {
+  float: right;
+  top: 10px;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 2;
+  display: block;
+  transition: left 0.3s ease, right 0.3s ease; /* Add transition for smooth animation */
+}
+
+.toggle_btn:hover {
+  left: initial;
+  color: #000; /* Set the color on hover */
+  right: 10px;
+}
+
+.wrapper .sidebar h2{
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.wrapper .sidebar ul li{
+  padding: 15px;
+  border-bottom: 1px solid #bdb8d7;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  border-top: 1px solid rgba(255,255,255,0.05);
+}    
+
+.wrapper .sidebar ul li a{
+  color: #bdb8d7;
+  display: block;
+}
+
+.wrapper .sidebar ul li a .fas{
+  width: 25px;
+}
+
+.wrapper .sidebar ul li:hover{
+  background-color: #594f8d;
+}
+    
+.wrapper .sidebar ul li:hover a{
+  color: #fff;
+}
+ 
+.wrapper .sidebar .social_media{
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.wrapper .sidebar .social_media a{
+  display: block;
+  width: 40px;
+  background: #594f8d;
+  height: 40px;
+  line-height: 45px;
+  text-align: center;
+  margin: 0 5px;
+  color: #bdb8d7;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+
+.wrapper .main_content .header{
+  padding: 20px;
+  background: #fff;
+  color: #717171;
+  border-bottom: 1px solid #e0e4e8;
+}
+
+.wrapper .main_content .info{
+  margin: 20px;
+  color: #717171;
+  line-height: 25px;
+}
+
+.wrapper .main_content .info div{
+  margin-bottom: 20px;
+}/* Container styles */
+.container {
+    background-color: #fff;
+    border: 2px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    max-height: 100%;
+}
+
+  .custom-container {
+        padding-bottom: 60px;
+        background-color: #f8f9fa;
+        border: 1px solid #dee2e6;
+        border-radius: 5px;
+        margin-bottom: 15px;
+    }
+/* Report container styles */
+  /* Custom styles for tables */
+  .table-custom {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.table-custom th,
+.table-custom td {
+  width: 20%;
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #e0e0e0;
+}
+
+.table-custom thead th {
+    background-color: rgb(4, 95, 4);
+
+    color: #fff;
+}
+
+.table-custom tbody tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+.table-custom tbody tr:hover {
+    background-color: #d9edf7;
+}
+
+/* Styling specific to your tables */
+.report-container {
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.report-header {
+    background-color: rgb(4, 95, 4);
+
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px 5px 0 0;
+}
+
+.report-header h1 {
+    margin: 0;
+}
+
+.report-body {
+    padding: 20px;
+        width: 80%; /* Adjust the width as needed */
+        margin: 0 auto; /* Center the table horizontally */
+}
+/* Product image style */
+.product-image {
+    max-width: 100px;
+    max-height: 100px;
+}
+
+/* Product name style */
+.product-name {
+    font-weight: bold;
+}
+
+/* Style for quantity and price cells */
+.quantity, .price {
+    text-align: center;
+}
+
+/* Additional report container styles */
+
+
+
+/* Accept and Reject buttons */
+.accept-button,
+.reject-button,
+.search-button,
+.archive-button,
+.edit-button {
+  cursor: pointer;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px
+}
+
+
+
+.edit-button:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+.accept-button:hover {
+  background-color: #4CAF50;
+  color: white;
+}.search-button:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+.archive-button:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+.reject-button:hover {
+    background-color: #f44336;
+    color: white;
+}
+
+
+.buttoncontainer {
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.btn {
+  background-color: #4CAF50;
+  font-size: 24px; /* Increase the font size */
+  padding: 15px 30px; /* Increase the padding (top/bottom and left/right) */
+  margin: 10px;
+}
+
+.custom-container {
+  height: 250px; /* Adjust the height as needed */
+}
+
+
+#chat-box {
+  width: 300px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 20px;
+}
+#messages {
+  height: 200px;
+  overflow-y: scroll;
+  border: 1px solid #eee;
+  padding: 10px;
+}
+#input-area {
+  display: flex;
+}
+#user-input {
+  flex: 1;
+  padding: 5px;
+}
+#send-button {
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+
+/* Login & Signup Form CSS Start */
+.form{
+  padding: 25px 30px;
+}
+.form header{
+  font-size: 25px;
+  font-weight: 600;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #8a8a8a;
+}
+.form form{
+  margin: 20px 0;
+}
+.form form .error-text{
+  color: #721c24;
+  padding: 8px 10px;
+  text-align: center;
+  border-radius: 5px;
+  background: #f8d7da;
+  border: 1px solid #f5c6cb;
+  margin-bottom: 10px;
+  display: none;
+}
+.form form .name-details{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.form form .name-details .field{
+  width: 45%;
+}
+/* .form .name-details .field:first-child{
+  margin-right: 10px;
+}
+.form .name-details .field:last-child{
+  margin-left: 10px;
+} */
+.form form .field{
+  display: flex;
+  margin-bottom: 10px;
+  flex-direction: column;
+  position: relative;
+}
+.form form .field label{
+  margin-bottom: 2px;
+}
+.form form .input input{
+  height: 40px;
+  width: 100%;
+  font-size: 16px;
+  padding: 0 10px;
+  position: relative;
+  border-radius: 5px;
+  border: none;
+  background: transparent;
+  color: #fff;
+}
+.form form .input input::placeholder{
+color: #ccc;
+}
+.form form .input::before{
+content: '';
+position: absolute;
+bottom:0px;
+left: 0;
+width: 100%;
+height: 1px;
+background:#fff;
+display: block;
+z-index: 10;
+transition: all 0.2s ease;
+}
+.form form .field input{
+  outline: none;
+}
+.form form .image input{
+  font-size: 17px;
+}
+.profile-image{
+  display: none;
+}
+.form form .button input{
+  height: 45px;
+  border: none;
+  color: #fff;
+  font-size: 17px;
+  background: var(--pink-color);
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 13px;
+  transition: all .5s ease;
+}
+.form form .button input:hover{
+background: var(--pink-dark);
+}
+.form form .field i{
+  position: absolute;
+  right: 15px;
+  top: 70%;
+  color: #ccc;
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+
+.form form .field i.active::before{
+  color: var(--pink-color);
+  content: "\f070";
+}
+.form .link{
+  text-align: center;
+  margin: 10px 0;
+  font-size: 17px;
+}
+.form .link a{
+  color: #eee;
+  margin-left: .5rem;
+}
+.form .link a:hover{
+  text-decoration: underline;
+}
+
+.card {
+  border: none;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+.card-header {
+  background-color: #bf82b7;
+  color: #fff;
+  border-radius: 10px 10px 0 0;
+}
+.chat-body {
+  height: 400px;
+  overflow-y: auto;
+}
+.message {
+ 
+  max-width: 300px;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 10px;
+  font-size: 16px;
+}
+.received {
+background-color: #d4d4d4;
+color: #000;
+}
+
+.sent {
+text-align: right;
+background-color: #007bff;
+color: #fff;
+margin-left: auto; /* Move sent messages to the right by pushing them to the right margin */
+}
+
+.input-group {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.form-control {
+  border: none;
+  border-bottom: 2px solid #007bff; /* Blue bottom border */
+  border-radius: 0; /* Remove border radius */
+  box-shadow: none; /* Remove input box shadow */
+}
+
+.form-control:focus {
+  border-color: #007bff; /* Blue border color on focus */
+  box-shadow: none; /* Remove focus box shadow */
+}
+
+/* Send button */
+#sendButton {
+  background-color: #007bff; /* Blue background color */
+  color: #fff; /* White text color */
+  border: none;
+}
+
+#sendButton:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+  /* Style the select inputs */
+  #dewormingMedication, #vaccinationType {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 8px;
+    width: 100%;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #333;
+  }
+
+  /* Style the date inputs */
+  #dewormingDate, #dewormingDueDate, #vaccinationDate, #vaccinationDueDate {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 8px;
+    width: 100%;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #333;
+  }
+
+  /* Style the weight input */
+  #vaccinationWeight {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 8px;
+    width: 100%;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #333;
+  }
+
+  /* Style the Save button */
+  .btn-primary {
+    background-color: #337ab7;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    color: #fff;
+  }
+  label {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #333;
+  }
+  .table-responsive h1:first-of-type::after {
+    content: "";
+    display: block;
+    border-top: 2px solid #333;
+    margin: 10px 0;
+  }
+  .btn-success {
+    background-color: #27ae60;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.contact-list {
+  max-height: 400px;
+  min-height: 400px; /* Adjust the max height as needed */
+  overflow-y: auto; /* Show a scrollbar when the content exceeds the max height */
+}
+
+.btn-danger {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.btn-sm {
+    font-size: 12px;
+}
+
+.row-heading {
+    background-color: #3498db;
+    color: #fff;
+}
+
+.btnMedicine {
+  width: 50%;
+  height: 100px;
+  font-size: 24px; /* You can adjust the font size to make the buttons bigger */
+  padding: 20px 40px; /* You can adjust the padding to increase the clickable area */
+}
+.main_content {
+  overflow: auto;
+  max-height: 100vh; /* Set a maximum height for the content */
+}/* Add or update this style for the exit button */
+/* Add or update this style for the exit button */
+
+#exitButton {
+  background-color: #d93025; /* Messenger red exit button color */
+  color: #fff; /* Text color */
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#exitButton:hover {
+  background-color: #b8271a; /* Darker red on hover */
+}
+
+
+
+@media screen and (max-width: 769px) {
+      .card-footer .input-group input {
+        height: 40px; /* Adjust the height as needed */
+    }
+  .header {
+    font-size: 12px;
+  }
+
+  .main_content {
+    margin-left: 0;
+  }
+
+  .sidebar {
+    z-index: 1;
+    margin-left: -200px;
+  }
+
+  .col-md-9.adjust.opacity {
+    padding-left: 15px;
+  }
+
+  .form-group.row {
+    flex-direction: column;
+  }
+
+  .button-container .col-md-6 {
+    margin-bottom: 15px;
+  }
+
+  .contact-list {
+    max-height: 200px;
+    min-height: 200px;
+    overflow-y: auto;
+  }
+
+
+  .col-md-9 {
+    width: 100%; /* Make the chat column full width by default */
+  }
+
+  .col-md-9.show-chat {
+    width: 75%; /* Adjust the width when chat is visible */
+  }
+
+  .box {
+    display: none;
+}
+#exitButton {
+  
+  z-index: 100;
+  float: right;
+  display: block; /* Show the exit button on smaller screens */
+  font-size: 18px; /* Adjust the font size for smaller screens */
+  width: 30px; /* Adjust the width for smaller screens */
+  height: 30px; /* Adjust the height for smaller screens */
+  line-height: 28px; /* Adjust the line height for smaller screens */
+}
+
+}
+
+.card-counter{
+  box-shadow: 2px 2px 10px #DADADA;
+  margin: 5px;
+  padding: 20px 10px;
+  background-color: #fff;
+  height: 100px;
+  border-radius: 5px;
+  transition: .3s linear all;
+}
+
+.card-counter:hover{
+  box-shadow: 4px 4px 20px #DADADA;
+  transition: .3s linear all;
+}
+
+.card-counter.primary{
+  background-color: #007bff;
+  color: #FFF;
+}
+
+.card-counter.danger{
+  background-color: #ef5350;
+  color: #FFF;
+}  
+
+.card-counter.success{
+  background-color: #66bb6a;
+  color: #FFF;
+}  
+
+.card-counter.info{
+  background-color: #26c6da;
+  color: #FFF;
+}  
+
+.card-counter i{
+  font-size: 5em;
+  opacity: 0.2;
+}
+
+.card-counter .count-numbers{
+  position: absolute;
+  right: 35px;
+  top: 20px;
+  font-size: 32px;
+  display: block;
+}
+
+.card-counter .count-name{
+  position: absolute;
+  right: 35px;
+  top: 65px;
+  font-style: italic;
+  text-transform: capitalize;
+  opacity: 0.5;
+  display: block;
+  font-size: 18px;
+}

@@ -1,0 +1,178 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-XfPdu5HyKl3LoVnMdUtD9psC+q42jF9RAGhMaEySyUm8IvLo/3A/Bjx1ExPxDW48DprZIgmXPC5S9q5t4+g/4A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <title>Moergan&Friends</title>
+</head>
+<body>
+<div class="wrapper">
+    <nav class="nav">
+        <div class="nav-logo">
+            <img src="image/bg.jpg" alt="">
+        </div>
+        <div class="nav-menu" id="navMenu">
+            <ul>
+                <li><a href="home.php" class="link active">Home</a></li>
+                <li><a href="services.html" class="link">Services</a></li>
+                <li><a href="about.html" class="link">About</a></li>
+            </ul>
+        </div>
+        <div class="nav-button">
+            <button class="btn white-btn" id="loginBtn" onclick="login()">Sign In</button>
+            <button class="btn" id="registerBtn" onclick="register()">Sign Up</button>
+        </div>
+        <div class="nav-menu-btn">
+            <i class="bx bx-menu" onclick="myMenuFunction()"></i>
+        </div>
+    </nav>
+
+    <!-- ADVERTISERS SERVICE CARD -->
+<section id="advertisers" class="advertisers-service-sec pt-5 pb-5">
+   
+    <div class="container">
+      <div class="row">
+        <div class="section-header text-center">
+          <h2 class="fw-bold fs-1">
+            Our
+            <span class="b-class-secondary">Veterynary Clinic </span>Services
+          </h2>
+          <p class="sec-icon"><i><box-icon name='clinic'></box-icon></i></p>
+        </div>
+      </div>
+      <div class="row mt-5 mt-md-4 row-cols-1 row-cols-sm-1 row-cols-md-3 justify-content-center">
+        <div class="col">
+          <div class="service-card">
+            <div class="icon-wrapper">
+                <i class='bx bxl-shopify'></i>
+            </div>
+            <h3> Pet Shop/Accessories</h3>
+            <p>
+                Quality products, caring service, and a passion for pets – that's what sets us apart. 
+                Step into a haven for pet lovers, where happiness is a wag away!"
+            </p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="service-card">
+            <div class="icon-wrapper">
+                <i class='bx bxs-capsule' ></i>
+            </div>
+            <h3>Veterinary Pharmacy</h3>
+            <p>
+                Find a comprehensive selection of pet medications, prescription diets, and health supplements.
+                 Our pharmacy is committed to ensuring your pets receive the best care through quality pharmaceuticals.
+            </p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="service-card">
+            <div class="icon-wrapper">
+                <i class='bx bx-cut' ></i>
+            </div>
+            <h3> Grooming Services</h3>
+            <p>
+               Treat your pets to a spa day! Our professional grooming services will have them looking and feeling their best. 
+                From stylish haircuts to soothing baths, we cater to their grooming needs with love and care.
+            </p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="service-card">
+            <div class="icon-wrapper">
+                <i class='bx bx-heart' ></i>
+                        </div>
+            <h3>Veterinary Consultation</h3>
+            <p>
+                 Our experienced veterinarians are here to address your concerns and provide expert advice.
+                 Schedule a consultation to discuss your pet's health, behavior, or any specific care requirements.
+            </p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="service-card">
+            <div class="icon-wrapper">
+                <i class='bx bx-injection' ></i>
+            </div>
+            <h3>Vaccination & Deworming</h3>
+            <p>
+                We offers personalized vaccination plans to protect against infectious diseases, ensuring your pet's long-term health.
+            </p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="service-card">
+            <div class="icon-wrapper">
+                <i class='bx bx-question-mark' ></i>
+            </div>
+            <h3>Others</h3>
+            
+                <ul>
+                    <li><p>Laboratory Diagnosis</p></li>
+                    <li><p>Microscopy Stool Test</p> </li>
+                    <li><p>Microfilarial Test</p></li>
+                    <li><p>Vaginal Smear</p></li>
+                    <li><p>Complete Blood Count (CBC)</p></li>
+                </ul>
+           
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ADVERTISERS SERVICE CARD ENDED -->
+</div>
+<script>
+   
+   function myMenuFunction() {
+    var i = document.getElementById("navMenu");
+
+    if(i.className === "nav-menu") {
+        i.className += " responsive";
+    } else {
+        i.className = "nav-menu";
+    }
+   }
+ 
+</script>
+
+<script>
+    // JavaScript functions for switching between login and registration forms
+    // and handling the mobile menu toggle
+    var a = document.getElementById("loginBtn");
+    var b = document.getElementById("registerBtn");
+    var x = document.getElementById("login");
+    var y = document.getElementById("register");
+
+   function login() {
+        window.location.href = "home.php";
+    x.style.left = "4px";
+    y.style.right = "-520px";
+    a.className += " white-btn";
+    b.className = "btn";
+    x.style.opacity = 1;
+    y.style.opacity = 0;
+
+    // Add redirect here
+
+}
+
+function register() {
+    window.location.href = "home.php";
+    x.style.left = "-510px";
+    y.style.right = "5px";
+    a.className = "btn";
+    b.className += " white-btn";
+    x.style.opacity = 0;
+    y.style.opacity = 1;
+}
+
+
+</script>
+</body>
+</html>
